@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FDBED6B-DDE4-4CA1-8169-88B80C6A6F2E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rocket</RootNamespace>
+    <AssemblyName>Rocket</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bill.cs" />
+    <Compile Include="Branch\BranchTax.cs" />
+    <Compile Include="Branch\Building.cs" />
+    <Compile Include="Branch\PipeFA.cs" />
+    <Compile Include="Branch\PipeAB.cs" />
+    <Compile Include="Branch\ExtraDig.cs" />
+    <Compile Include="Branch\Dig.cs" />
+    <Compile Include="Branch\ExtraPipe.cs" />
+    <Compile Include="Branch\Jamavari.cs" />
+    <Compile Include="Branch\Kit.cs" />
+    <Compile Include="Branch\Made11AB.cs" />
+    <Compile Include="Branch\Made11FA.cs" />
+    <Compile Include="Branch\Meter.cs" />
+    <Compile Include="Branch\Pipe.cs" />
+    <Compile Include="Branch\RowWater.cs" />
+    <Compile Include="Branch\BranchSecondRemark.cs" />
+    <Compile Include="Branch\SewageNasb.cs" />
+    <Compile Include="Branch\TemporalBranch.cs" />
+    <Compile Include="Branch\WaterNasb.cs" />
+    <Compile Include="Core\CalculationType.cs" />
+    <Compile Include="Extentions.cs" />
+    <Compile Include="Options\BranchSecondRemarkOptions.cs" />
+    <Compile Include="Options\BranchTaxOptions.cs" />
+    <Compile Include="Options\PopulationYouthOptions.cs" />
+    <Compile Include="Options\PipeFAOptions.cs" />
+    <Compile Include="Options\PipeABOptions.cs" />
+    <Compile Include="Options\KitOptions.cs" />
+    <Compile Include="Options\MeterOptions.cs" />
+    <Compile Include="Options\PipeOptions.cs" />
+    <Compile Include="Options\DigExtraOptions.cs" />
+    <Compile Include="Options\DigOptions.cs" />
+    <Compile Include="Branch\Made11.cs" />
+    <Compile Include="Branch\SewageMembershipFee.cs" />
+    <Compile Include="Branch\ThirdRemarkAB.cs" />
+    <Compile Include="Branch\ThirdRemarkFA.cs" />
+    <Compile Include="Branch\WaterMembershipFee.cs" />
+    <Compile Include="Core\BillEventType.cs" />
+    <Compile Include="Core\Block.cs" />
+    <Compile Include="Core\CityPartition.cs" />
+    <Compile Include="Core\CompareByHash.cs" />
+    <Compile Include="Core\CostTypePartition.cs" />
+    <Compile Include="Core\Entry.cs" />
+    <Compile Include="Core\EntryHash.cs" />
+    <Compile Include="Core\EntryType.cs" />
+    <Compile Include="Core\FineCost.cs" />
+    <Compile Include="Core\Frame.cs" />
+    <Compile Include="Core\Gap.cs" />
+    <Compile Include="Core\GapRecord.cs" />
+    <Compile Include="Core\GapSeries.cs" />
+    <Compile Include="Core\GapType.cs" />
+    <Compile Include="Core\IGap.cs" />
+    <Compile Include="Core\IHasTransactions.cs" />
+    <Compile Include="Core\IMutate.cs" />
+    <Compile Include="Core\InTime.cs" />
+    <Compile Include="Core\InVolume.cs" />
+    <Compile Include="Core\IObserver.cs" />
+    <Compile Include="Core\ISubject.cs" />
+    <Compile Include="Core\ITimeRange.cs" />
+    <Compile Include="Core\IUsageSubject.cs" />
+    <Compile Include="Core\KarbariPartition.cs" />
+    <Compile Include="Core\KindBranch.cs" />
+    <Compile Include="Core\Ledger.cs" />
+    <Compile Include="Core\Link.cs" />
+    <Compile Include="Core\MergeFrame.cs" />
+    <Compile Include="Core\PhasePartition.cs" />
+    <Compile Include="Core\ResourceType.cs" />
+    <Compile Include="Core\SortedSplitList.cs" />
+    <Compile Include="Core\TimeRecord.cs" />
+    <Compile Include="Core\TimeSeries.cs" />
+    <Compile Include="Core\Transaction.cs" />
+    <Compile Include="Core\TransactionSource.cs" />
+    <Compile Include="Core\TransactionType.cs" />
+    <Compile Include="Core\Unit.cs" />
+    <Compile Include="Core\Utils.cs" />
+    <Compile Include="Options\BrokenPipeOptions.cs" />
+    <Compile Include="Options\BuildingOptions.cs" />
+    <Compile Include="Options\FreeWaterOptions.cs" />
+    <Compile Include="Options\JamavariOptions.cs" />
+    <Compile Include="Options\Made11Options.cs" />
+    <Compile Include="Options\Made7Options.cs" />
+    <Compile Include="Options\RowWaterOptions.cs" />
+    <Compile Include="Options\SeasonalOptions.cs" />
+    <Compile Include="Options\SecondRemarkOptions.cs" />
+    <Compile Include="Options\SewageMembershipOptions.cs" />
+    <Compile Include="Options\SewageNasbOptions.cs" />
+    <Compile Include="Options\SixthRemarkOptions.cs" />
+    <Compile Include="Options\SubscriptionOptions.cs" />
+    <Compile Include="Options\SubscriptionSewageOptions.cs" />
+    <Compile Include="Options\TankerOptions.cs" />
+    <Compile Include="Options\TaxOptions.cs" />
+    <Compile Include="Options\TemporalBranchOptions.cs" />
+    <Compile Include="Options\ThirdRemarkABOptions.cs" />
+    <Compile Include="Options\ThirdRemarkFAOptions.cs" />
+    <Compile Include="Options\ThirdRemarkOptions.cs" />
+    <Compile Include="Branch\Ticket.cs" />
+    <Compile Include="Options\TicketOptions.cs" />
+    <Compile Include="Options\WasteWaterOptions.cs" />
+    <Compile Include="Options\WaterCostOptions.cs" />
+    <Compile Include="Options\WaterMembershipFeeOptions.cs" />
+    <Compile Include="Options\WaterMembershipOptions.cs" />
+    <Compile Include="Options\WaterNasbOptions.cs" />
+    <Compile Include="Options\WaterPatternOptions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="States\NormalUsageState.cs" />
+    <Compile Include="States\OverUsageState.cs" />
+    <Compile Include="States\UsageState.cs" />
+    <Compile Include="Units\BrokenPipe.cs" />
+    <Compile Include="Units\ApplyCityRate.cs" />
+    <Compile Include="Units\PopulationYouth.cs" />
+    <Compile Include="Units\FreeWater.cs" />
+    <Compile Include="Units\Made7.cs" />
+    <Compile Include="Units\Seasonal.cs" />
+    <Compile Include="Units\SecondRemark.cs" />
+    <Compile Include="Units\SewageTax.cs" />
+    <Compile Include="Units\SixthRemark.cs" />
+    <Compile Include="Units\Subscription.cs" />
+    <Compile Include="Units\SubscriptionSewage.cs" />
+    <Compile Include="Units\Tanker.cs" />
+    <Compile Include="Units\Tax.cs" />
+    <Compile Include="Units\ThirdRemark.cs" />
+    <Compile Include="Units\WasteWater.cs" />
+    <Compile Include="Units\WaterCost.cs" />
+    <Compile Include="Units\WaterDiscount.cs" />
+    <Compile Include="Units\WaterPattern.cs" />
+    <Compile Include="Units\WaterTax.cs" />
+    <Compile Include="UsageSubject.cs" />
+    <Compile Include="UsageView.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
